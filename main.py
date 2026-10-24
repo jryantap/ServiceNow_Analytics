@@ -36,6 +36,8 @@ print(df.columns)
 print((df["Status"] == "Resolved").sum())
 print((df["Status"] == "On Hold").sum())
 
+# count how many times each unique status appears in the column
+print((df["Status"].value_counts))
 
 
 
