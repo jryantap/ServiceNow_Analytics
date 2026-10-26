@@ -24,13 +24,16 @@ import pandas as pd
 # Read the excel file first, store it in a dataframe (df)
 df = pd.read_excel("servicenow_mock_sample.xlsx")
 
-# ================== test it first, =====================
+# ================== test it first, ===============
 # display the first 10 rows
 print(df.head(10))
 # display total number of tickets in the excel file. 
 print(len(df))
 # display all column names
 print(df.columns)
+# ================== end test, =====================
+
+# ================== main data prompts, and calculations ==========
 
 # count ticket with given status
 print((df["Status"] == "Resolved").sum())
@@ -39,6 +42,13 @@ print((df["Status"] == "On Hold").sum())
 # count how many times each unique status appears in the column
 print(df["Status"].value_counts())
 
+# resolution rate 
+total_tickets = len(df)
+resolved_tickets = (df["Status"] == "Resolved").sum()
+
+resolution_rate = (resolved_tickets/total_tickets) * 100
+
+print("Resolution Rate: ", resolution_rate)
 
 
 
