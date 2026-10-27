@@ -53,7 +53,8 @@ unresolved_tickets = total_tickets - resolved_tickets
 print("Number of unresolved tickets = ", unresolved_tickets)
 
 unresolved_rate = (unresolved_tickets/total_tickets) * 100
-print("Unresolved ticket rate: ", unresolved_rate)
+print("Unresolved ticket rate: ", round(unresolved_rate, 2)) # round it to 2 decimal places
+
 
 
 
