@@ -42,13 +42,18 @@ print((df["Status"] == "On Hold").sum())
 # count how many times each unique status appears in the column
 print(df["Status"].value_counts())
 
-# resolution rate 
+# resolution rate and calculations
 total_tickets = len(df)
 resolved_tickets = (df["Status"] == "Resolved").sum()
 
 resolution_rate = (resolved_tickets/total_tickets) * 100
+print("Resolution ticket Rate: ", resolution_rate)
 
-print("Resolution Rate: ", resolution_rate)
+unresolved_tickets = total_tickets - resolved_tickets
+print("Number of unresolved tickets = ", unresolved_tickets)
+
+unresolved_rate = (unresolved_tickets/total_tickets) * 100
+print("Unresolved ticket rate: ", unresolved_rate)
 
 
 
