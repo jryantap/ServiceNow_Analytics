@@ -25,15 +25,16 @@ import pandas as pd
 df = pd.read_excel("servicenow_mock_sample.xlsx")
 
 # ================== test it first, ===============
-# display the first 10 rows
-print(df.head(10))
-# display total number of tickets in the excel file. 
-print(len(df))
-# display all column names
-print(df.columns)
-# ================== end test, =====================
+# # display the first 10 rows
+# print(df.head(10))
+# # display total number of tickets in the excel file. 
+# print(len(df))
+# # display all column names
+# print(df.columns)
 
-# ================== main data prompts, and calculations ==========
+# ================== end test, code is working as intended =====================
+
+# ================== main data prompts, and calculations ========== #
 
 # count ticket with given status
 print((df["Status"] == "Resolved").sum())
@@ -60,3 +61,5 @@ print(df["Analyst"].value_counts())
 
 # how many different unique analyst are in the dataset?
 print(df["Analyst"].nunique())
+
+# ================== filtering and counting ========== #
