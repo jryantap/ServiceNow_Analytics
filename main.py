@@ -57,3 +57,6 @@ print("Unresolved ticket rate: ", round(unresolved_rate, 2)) # round it to 2 dec
 
 # how many tickets each analyst handled
 print(df["Analyst"].value_counts())
+
+# how many different unique analyst are in the dataset?
+print(df["Analyst"].nunique())
