@@ -63,3 +63,9 @@ print(df["Analyst"].value_counts())
 print(df["Analyst"].nunique())
 
 # ================== filtering and counting ========== #
+
+# how many tickets each analyst has resolved
+# filter by Resolved Status first
+resolved_df = df[df["Status"] == "Resolved"] 
+print(resolved_df["Analyst"].value_counts())
+
